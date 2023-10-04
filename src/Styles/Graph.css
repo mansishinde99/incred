@@ -1,0 +1,26 @@
+.graph {
+  display: flex;
+  flex-direction: row;
+  padding: 72px 0;
+  margin: 54px 150px 0 150px;
+}
+
+.utImg img {
+    width: 80%;
+    cursor: pointer;
+}
+
+.graphText {
+    width: 35%;
+}
+
+.graphTitle {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.graphDesc {
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 450;
+}

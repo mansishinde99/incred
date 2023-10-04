@@ -1,0 +1,132 @@
+.loginPage {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftSide {
+  padding: 0 2.5rem;
+  width: 570px;
+  background-color: #283a97;
+  height: 715px;
+}
+
+.leftSide .sideBarLogo {
+  padding: 1.5rem 2.5rem;
+  margin: 0 0 27px -45px;
+  background-color: #fff;
+  width: 650px;
+}
+
+.leftSide .sideBarLogo a img {
+  width: 11rem;
+  height: 5rem;
+}
+
+.sideBarContent {
+  margin-top: 27px;
+}
+
+.sideBarContent p {
+  font-size: 53px;
+  line-height: 67px;
+  font-weight: 600;
+  color: #fff;
+  margin: 1.5rem 0;
+}
+
+.rightSide {
+  margin: 151px 170px;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.rightSide .title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.rightSide .text {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 4rem;
+  margin-top: 0;
+}
+
+.choose {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.choose .via {
+  cursor: pointer;
+  font-size: 18px;
+  border: 1px solid #fff;
+  box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.07);
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.phone {
+  display: flex;
+}
+
+.selectCountry {
+  margin-right: 0.25rem;
+}
+
+.selectCountry select {
+  border: none;
+  border-bottom: 2px solid #25d782;
+  width: 125px;
+  line-height: 1.5;
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0,0,0,.75);
+  appearance: none;
+  outline: none;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #25d782;
+  width: 282px;
+  line-height: 1.2;
+  padding: 0.375rem 0.75rem ;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none ;
+}
+
+.tnc{
+  margin-top: 1rem;
+  font-size: 11px;
+  font-weight: 500;
+  width: 450px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.tnc span{
+  color: #283a97;
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+
+.loginPageButton{
+  margin-top: 2rem;
+  margin-left: 0;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #283a97;
+  color: #fff;
+  padding: 1rem;
+}

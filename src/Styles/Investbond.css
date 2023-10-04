@@ -1,0 +1,36 @@
+.investBonds {
+  margin: 90px 150px 0 150px;
+}
+
+.bondsTitle {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.investsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 27px;
+  margin-top: 27px;
+  width: 100%;
+}
+
+.entireBonds {
+  padding: 0 15px;
+  width: 220px;
+}
+
+.entireBonds img{
+    width: 140px;
+    height: 130px;
+    margin-left: 30px;
+
+}
+
+.entireBonds p{
+    font-size: 1.22rem;
+    text-align: center;
+    font-weight: 500;
+}
