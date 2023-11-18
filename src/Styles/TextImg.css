@@ -1,5 +1,5 @@
 .textImgContainer {
-  margin: 90px 150px 0;
+  margin: 90px 110px 0;
   padding: 0 15px;
   text-align: center;
 }
@@ -13,46 +13,31 @@
 .textImgBlock {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 10vw;
   height: 400px;
   margin-top: 100px;
 }
 
-.textContent1{
-text-align: left;
-width: 45%;
-padding: 0 15px;
+.textImgBlock img{
+  width: 32vw;
+  height: 23vw;
 }
 
-.textContent1 .title{
-    font-size: 40px;
-    font-weight: 500;
+.alltext .texts {
+  text-align: start;
+  border-bottom: 2px solid #BFC5E9;
+  width: 35vw;
+  height: 5vw;
 }
 
-.textContent1 .desc{
-    font-size: 20px;
-    font-weight: 450;
-    line-height: 1.5;
+.alltext .texts .text1{
+  font-weight: 600;
+  padding-bottom: 1vw;
+  cursor: pointer;
+  /* padding-right: 15vw; */
 }
 
-.textContent2{
-    text-align: left;
-    width: 50%;
-    padding: 0 15px;
+.alltext .texts .text2{
+  font-weight: 500;
 }
 
-.textContent2 .title{
-    font-size: 40px;
-    font-weight: 500;
-}
-
-.textContent2 .desc{
-    font-size: 20px;
-    font-weight: 450;
-    line-height: 1.5;
-    word-spacing: 6px;
-}
-
-.textImgContainer button{
-    margin-top: 5rem;
-}

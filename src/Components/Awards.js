@@ -3,22 +3,22 @@ import "../Styles/Awards.css";
 
 let Recs = [
   {
-    img: "https://www.incredmoney.com/static/images/about/img_trophy_1.png",
+    img: "https://assets.incredmoney.com/images/webp/hdfcAwards.webp",
     text: "HDFC MUTUAL FUNDS",
     subText: "Top 10 wisest advisors in India, 2017", 
 },
 {
-    img: "https://www.incredmoney.com/static/images/about/img_trophy_2.png",
+    img: "https://assets.incredmoney.com/images/webp/dellAwards.webp",
     text: "DELL",
     subText: "Winner of the Dell Startup Challenge", 
 },
 {
-    img: "https://www.incredmoney.com/static/images/about/img_trophy_3.png",
+    img: "https://assets.incredmoney.com/images/webp/ibmAwards.webp",
     text: "IBM SMARTCAMP",
     subText: "Top 10 Indian early stage fintech startups", 
 },
 {
-    img: "https://www.incredmoney.com/static/images/about/img_trophy_4.png",
+    img: "https://assets.incredmoney.com/images/webp/ubsAwards.webp",
     text: "UBS",
     subText: "Top 10 Asia Fintech in the future of finance challenge", 
 },

@@ -3,16 +3,25 @@ import "../Styles/Investbond.css"
 
 let investbonds = [
     {
-        img:"https://www.incredmoney.com/static/images/home/portfolio.png",
-        desc:"Diversify your portfolio, beat inflation & build a passive income"
+        img:"https://assets.incredmoney.com/images/webp/corporate.webp",
+        title:"Corporate Bonds",
+        text1: "0%-12% Fixed Returns",
+        text2: "Investment Grade Rated Bonds",
+        text3: "Secured & Listed",
     },
     {
-        img:"https://www.incredmoney.com/static/images/home/listed.png",
-        desc:"Listed, Secured, and Credit Rated"
+        img:"https://assets.incredmoney.com/images/webp/ipo.webp",
+        title:"NCD IPO",
+        text1: "Invest Online up to 10L",
+        text2: "No KYC Documents Required",
+        text3: "Secured, Listed & Rated",
     },
     {
-        img:"https://www.incredmoney.com/static/images/home/curated.png",
-        desc:"Curated by a team of experts with decades of experience in credit research"
+        img:"https://assets.incredmoney.com/images/webp/mld.webp",
+        title:"Market Linked Debentures",
+        text1: "100% Principal Protected",
+        text2: "Nifty Linked",
+        text3: "Secured, Listed & Rated",
     },
 ]
 
@@ -20,7 +29,7 @@ const Investbond = () => {
   return (
     <div className='investBonds'>
         <div className='bondsTitle'>
-            <h1>Invest in Bonds</h1>
+            <h1>Our Products</h1>
         </div>
         <div className='investsRow'>
             {investbonds.map((investbond, i) => {
@@ -35,7 +44,15 @@ const Investment = (props) => {
     return (
         <div className='entireBonds'>
             <img src={props.invest.img}/>
-            <p>{props.invest.desc}</p>
+            <p>{props.invest.title}</p>
+            <div className='lists'>
+                <ul>
+                <li>{props.invest.text1}</li>
+                <li>{props.invest.text2}</li>
+                <li>{props.invest.text3}</li>
+                </ul>
+                <button className='details'>View Details</button>
+            </div>
         </div>
     )
 }

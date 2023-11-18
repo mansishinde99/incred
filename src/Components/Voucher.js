@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../Styles/Voucher.css'
 
+//url: "https://api.incredmoney.com/funds/getBannerData";
+
+
 const Voucher = () => {
+  const[alldata,setAlldata] = useState([])
+
+  useEffect(() => {
+    fetch("https://api.incredmoney.com/funds/getBannerData")
+      .then((response) => response.json())
+      .then((json) => setAlldata(json))
+      .catch((error) => console.error(error));
+  }, []);
+
   return (
     <div className='voucherStrip'>
-        <div className='voucherAlert'>
-            <p className='text'>InCred MLD is now live. Sign up now & get 0.25% extra returns on first investment 🎁 | 28% Sold Out!</p>
+          {alldata.data?.map((data,i) => (
+            <div className='voucherAlert' key={i}>
+            <p className='text'>{data.bannerText}</p>
         </div>
+          ))}
     </div>
   )
 }

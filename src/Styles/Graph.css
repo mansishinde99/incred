@@ -1,26 +1,47 @@
-.graph {
-  display: flex;
-  flex-direction: row;
-  padding: 72px 0;
-  margin: 54px 150px 0 150px;
+.defaults{
+    display: flex;
+    gap: 5vw;
+    margin: 4vw 0 2vw 16vw;
 }
 
-.utImg img {
-    width: 80%;
-    cursor: pointer;
+.defaults .date{
+    width: 25vw;
 }
 
-.graphText {
-    width: 35%;
+.defaults .date .zero{
+    font-size: 14vw;
+    font-weight: bold;
+    margin: 0;
+    color: #283995;
+    text-align: center;
 }
 
-.graphTitle {
-    font-size: 40px;
+.defaults .date .dtd{
+    font-size: 2vw;
+    font-weight: 600;
+    margin: 0;
+}
+
+.defaults .payments{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.defaults .payments .logImage{
+    width: 24vw;
+    border: 1px solid;
+    border-image: linear-gradient(180deg,#dedddd,transparent) 1 100%; 
+    text-align: center;
+    padding: 1.3vw;
+}
+
+.defaults .payments .logImage .text{
+    font-size: 1.7vw;
+    font-weight: 600;
+    margin: 0.5vw;
+}
+
+.defaults .payments .logImage .subtext{
+    margin: 0;
     font-weight: 500;
-}
-
-.graphDesc {
-    font-size: 17px;
-    line-height: 1.5;
-    font-weight: 450;
 }

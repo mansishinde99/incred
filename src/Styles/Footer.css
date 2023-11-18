@@ -13,7 +13,7 @@
 .logoSection {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 5vw;
     margin-bottom: 1rem;
     height: 140px;
 }
@@ -43,9 +43,30 @@
 }
 
 .socialImg img{
-width: 50px;
-height: 50px;
+width: 2vw;
+height: 2vw;
 margin-right: 1rem;
+}
+
+.downloads{
+    border: 1px solid hsla(0,0%,100%,.9215686274509803);
+    border-radius: 2vw;
+}
+
+.downloads .download-text{
+    text-align: center;
+    position: relative;
+    top: -2vw;
+}
+
+.downloads .download-img {
+    display: flex;
+    gap: 1vw;
+}
+
+.downloads .download-img img{
+width: 8vw;
+height: 2vw;
 }
 
 hr{

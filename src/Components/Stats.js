@@ -3,24 +3,28 @@ import "../Styles/Stats.css";
 
 let folds = [
   {
-    img: "https://www.incredmoney.com/static/images/home/volume.png",
-    text: "₹1,170+ Cr",
-    subtext: "AUM (Assets Under Management)",
+    img: "https://assets.incredmoney.com/images/webp/sebiRegulated.webp",
+    text: "SEBI Regulated",
   },
   {
-    img: "https://www.incredmoney.com/static/images/home/return.png",
-    text: "10-12% XIRR",
-    subtext: "Avg returns (p.a.) earned",
+    img: "https://assets.incredmoney.com/images/webp/stock.webp",
+    text: "Bonds Listed On Exchanges",
   },
   {
-    img: "https://www.incredmoney.com/static/images/home/date.png",
-    text: "0",
-    subtext: "Defaults till date",
+    img: "https://assets.incredmoney.com/images/webp/anytimeLiquidity.webp",
+    text: "Anytime Liquidity",
   },
   {
-    img: "https://www.incredmoney.com/static/images/home/group.png",
-    text: "100%",
-    subtext: "On-time payments",
+    img: "https://assets.incredmoney.com/images/webp/hiddenCharge.webp",
+    text: "No Hidden Charges",
+  },
+  {
+    img: "https://assets.incredmoney.com/images/webp/inc.webp",
+    text: "Curated By Experts",
+  },
+  {
+    img: "https://assets.incredmoney.com/images/webp/principalProtected.webp",
+    text: "Excellent Customer Support",
   },
 ];
 
@@ -28,7 +32,7 @@ const Stats = () => {
   return (
     <div className="stats">
       <div className="statsTitle">
-        <h1>Join our community of 1,00,000+ investors</h1>
+        <h1 className="head">Why invest with InCred Money?</h1>
       </div>
       <div className="statsFold">
         {folds.map((fold, i) => {
@@ -45,7 +49,6 @@ const StatFold = (props) => {
         <img src={props.folded.img} />
         <div className="textPart">
           <p className="text">{props.folded.text}</p>
-          <p className="subText">{props.folded.subtext}</p>
         </div>
     </div>
   );

@@ -1,15 +1,15 @@
 .main {
-  background-color: #f7f8f8;
+  background-color: #e4e9ff;
   overflow: hidden;
-  height: 300px;
+  height: 76vh;
 }
 
 .jumbotron {
-  margin: 0 150px;
+  margin-left: 155px;
   padding: 0 15px;
   display: flex;
-  flex-direction: row;
   align-items: center;
+  right: 1vw;
 }
 
 .primaryJumbotron {
@@ -18,16 +18,18 @@
 
 .textSide {
   padding: 0 15px;
-  width: 60%;
+  width: 74%;
   top: -50px;
   position: relative;
 }
 
 .textSide .title {
-  font-size: 42px;
+  font-size: 4vw;
   font-weight: 600;
-  margin-top: 4rem;
+  margin-top: 4vw;
   margin-bottom: 3rem;
+  color: #283996;
+  line-height: 5.5vw;
 }
 
 .textSide .title span {
@@ -43,6 +45,79 @@
   margin-top: 1rem;
 }
 
+.featureList {
+  display: flex;
+  width: 65vw;
+}
+
+.featureList .feature {
+  display: flex;
+  width: -1vw;
+}
+
+.featureList .feature .image {
+  width: 3vw;
+  height: 3vw;
+  background-color: white;
+  border-radius: 4vw;
+  padding: 1.5vw;
+  cursor: pointer;
+}
+
+.featureList .feature .textpart {
+  margin: 0 1vw;
+}
+
+.featureList .feature .featuretitle {
+  font-size: 1.7vw;
+  font-weight: 600;
+  margin: 0.5vw 0;
+}
+
+.featureList .feature .text {
+  color: rgb(249, 68, 2);
+  margin: 0.5vw 0;
+  font-weight: 500;
+}
+
+.featureList .feature .subtext {
+  color: #6d6d6d;
+  margin: 0.5vw 0;
+  font-size: 1.3vw;
+  font-weight: 500;
+}
+
+.two-buttons{
+margin-top: 2vw;
+display: flex;
+gap: 2vw;
+}
+
+.two-buttons .get-started{
+  padding: 1.5vw 3vw;
+    background-color: #283996;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5vw;
+    align-self: center;
+}
+
+.two-buttons .watch-video{
+  cursor: pointer;
+  background-color: #fff;
+  padding: 1.5vw 2vw;
+  border: 1px solid black;
+  border-radius: 0.5vw;
+  font-size: 1.2vw;
+  font-weight: 600;
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  height: 1vw;
+}
+
+
 /* .textSide .note img {
   width: 45px;
   height: 45px;
@@ -55,15 +130,16 @@
 } */
 
 .imgSide {
-  width: 50%;
+  width: 19%;
   padding: 0 15px;
 }
 
 .imgSide img {
-  width: 90%;
+  width: 23vw;
+  height: 72vh;
   position: relative;
-  top: -30px;
-  left: 59px;
+  top: 2vw;
+  left: -3vw;
 }
 
 @media (max-width: 650px) {
@@ -103,7 +179,7 @@
     position: absolute;
   } */
 
-  .imgSide img{
+  .imgSide img {
     width: 363px;
     position: absolute;
     top: 42vh;

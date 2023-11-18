@@ -71,7 +71,7 @@ const Faqs = () => {
 };
 
 const Question = (props) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState();
 
   var opened = () => {
     setOpen(!open);

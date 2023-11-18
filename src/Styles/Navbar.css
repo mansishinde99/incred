@@ -1,62 +1,67 @@
 .container {
-  width: 100%;
-  height: 110px;
+  width: 96%;
+  height: 19vh;
   margin: 0 50px;
 }
 
 nav {
-  width: 1120px;
+  width: 91%;
   height: 65%;
-  padding: 18px 0;
-  margin: 0 110px;
+  padding: 24px 0;
   display: flex;
 }
 
 .incredImg {
-  margin-right: 2rem;
-  padding: 0.33125rem 0;
+  padding: 0;
   cursor: pointer;
 }
 
 .incredImg img {
-  width: 13vw;
-  height: 120%;
+  width: 13.3 vw;
+  height: 11vh;
 }
 
 .collapseNav {
   display: flex;
   flex-basis: auto;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   flex-grow: 1;
   align-items: center;
 }
 
 .collapseNav ul {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 60%;
+  width: 69%;
+  padding-top: 1vw;
 }
 
 .collapseNav ul li {
   cursor: pointer;
   list-style: none;
   color: rgb(32, 31, 31);
-  font-size: 17px;
-  font-weight: 600;
   /* transition: transform .3s,-webkit-transform .3s; */
 }
 
 .collapseNav ul li a {
+  height: 3vw;
   text-decoration: none;
   color: rgb(32, 31, 31);
+  font-size: 18px;
+  font-weight: 500;
+
 }
 
 .collapseNav ul li a:hover {
   text-decoration: none;
   color: #283a97;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.collapseNav .button{
+  margin-left: 2vw;
 }
 
 .dropdown {
@@ -72,7 +77,7 @@ nav {
   margin: 0;
 }
 
-.dropdownContent {
+.collapseNav ul .dropdown .dropdownContent {
   border-radius: 12px;
   display: none;
   position: absolute;
@@ -80,27 +85,28 @@ nav {
   width: 300px;
   box-shadow: -4px 4px 14px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
-  margin-top: 26px;
+  margin-top: 20px;
   padding: 10px 0;
 }
 
-.dropdownContent a {
-  font-family: 400;
+.collapseNav ul .dropdown .dropdownContent a {
+  font-weight: 400;
   float: none;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
+  height: 1.5vw;
 }
 
-.dropdownContent a:hover {
+.collapseNav ul .dropdown .dropdownContent a:hover {
   background-color: #ddd;
   color: black;
-  height: 20px;
+  height: 1.5vw;
 }
 
-.dropdown:hover .dropdownContent {
+.collapseNav ul .dropdown:hover .dropdownContent {
   display: block;
 }
 

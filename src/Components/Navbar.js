@@ -9,16 +9,25 @@ const Navbar = () => {
     <div className="container">
       <nav>
           <a className="incredImg" href="/">
-            <img src="https://www.incredmoney.com/static/images/logo/incred-money.png" />
+            <img src="https://assets.incredmoney.com/images/webp/incred-money.webp" />
           </a>
         
         <div className="collapseNav">
           <ul>
             <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
               <a href="">About Us</a>
+            </li>
+            <li className="dropdown" style={{ display: "flex" }}> 
+              <a className="dropbtn">Products</a>
+              <ArrowDropDownIcon />
+              <div className="dropdownContent" style={{marginTop:'30px'}}>
+                <a className="hovered" style={{color:'black'}}>Corporate Bonds</a>
+                <a className="hovered"style={{color:'black'}}>Market Linked Debentures</a>
+                <a className="hovered"style={{color:'black'}}>NCD IPO</a>
+              </div>
+              </li>
+              <li>
+              <a href="">Refer</a>
             </li>
             <li className="dropdown" style={{ display: "flex" }}> 
               <a className="dropbtn">Company</a>
@@ -29,9 +38,14 @@ const Navbar = () => {
                 <a className="hovered"style={{color:'black'}}>Career</a>
               </div>
             </li>
-            <li>
-              <a href="">Contact Us</a>
-            </li>
+            <li className="dropdown" style={{ display: "flex" }}> 
+              <a className="dropbtn">Download App</a>
+              <ArrowDropDownIcon />
+              <div className="dropdownContent" style={{marginTop:'30px'}}>
+                <a className="hovered" style={{color:'black'}}>Play Store</a>
+                <a className="hovered"style={{color:'black'}}>App Store</a>
+              </div>
+              </li>
             <li>
               <a href="">Blogs</a>
             </li>

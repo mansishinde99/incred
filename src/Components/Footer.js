@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer">
       <div className="content">
         <div className="logoSection">
-          <img src="https://www.incredmoney.com/static/images/shared/white-logo.png" />
+          <img src="https://assets.incredmoney.com/images/webp/white-logo.webp" />
           <div>
             <p className="disclaimerTitle">GET IN TOUCH</p>
             <p className="contact">+91 8591871028</p>
@@ -17,11 +17,11 @@ const Footer = () => {
             <p className="disclaimerTitle">SOCIAL MEDIA</p>
             <div className="socialImg">
               <a target="_blank" href="https://www.facebook.com/IncredMoney">
-                <img src="https://www.incredmoney.com/static/images/shared/facebook.png" alt="facebook" />
+                <img src="https://assets.incredmoney.com/images/webp/FBlogo.webp" alt="facebook" />
               </a>
               <a target="_blank" href="https://www.instagram.com/incredmoney/">
                 <img
-                  src="https://www.incredmoney.com/static/images/shared/instagram.png"
+                  src="https://assets.incredmoney.com/images/webp/instaLogo.webp"
                   alt="instagram"
                 />
               </a>
@@ -29,11 +29,18 @@ const Footer = () => {
                 target="_blank"
                 href="https://www.linkedin.com/company/incredmoney/"
               >
-                <img src="https://www.incredmoney.com/static/images/shared/linkedin.png" alt="linkedin" />
+                <img src="https://assets.incredmoney.com/images/webp/linkedinlogo.webp" alt="linkedin" />
               </a>
               <a target="_blank" href="https://twitter.com/incredmoney">
-                <img src="https://www.incredmoney.com/static/images/shared/twitter.png" alt="twitter" />
+                <img src="https://assets.incredmoney.com/images/webp/twitter.webp" alt="twitter" />
               </a>
+            </div>
+          </div>
+          <div className="downloads">
+            <p className="download-text">Download Incred Money App</p>
+            <div className="download-img">
+              <img src="https://assets.incredmoney.com/images/webp/playstore.webp"/>
+              <img src="https://assets.incredmoney.com/images/webp/appstore.webp"/>
             </div>
           </div>
         </div>
