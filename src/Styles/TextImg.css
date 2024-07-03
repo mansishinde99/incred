@@ -41,3 +41,32 @@
   font-weight: 500;
 }
 
+@media (min-width: 350px) and (max-width: 767px) {
+  .textImgContainer {
+    margin: 0 !important;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .textImgTitle {
+    margin: 0 !important;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.textImgBlock {
+display: inline;
+}
+
+.textImgBlock img {
+  width: 95vw;
+  height: 40vh;
+}
+
+.alltext .texts {
+  text-align: start;
+  width: 89vw;
+  height: 15vw;
+}
+}
+

@@ -1,0 +1,86 @@
+.testimonials {
+  margin: 9vw 0;
+}
+
+.testimonials .head {
+  font-size: 3.2vw;
+}
+
+.testimonials p {
+  text-align: center;
+  font-size: 1.7vw;
+  font-weight: 500;
+}
+
+.patrons {
+  width: 82vw;
+  display: flex;
+  gap: 2vw;
+  margin: 2vw 9vw;
+}
+
+.data {
+  border: 1px solid #d9d9d9;
+  border-radius: 2vw;
+  width: 27vw;
+}
+
+.data .said {
+  padding: 3vw 2vw;
+  padding-bottom: 1vw;
+  font-size: 1.2vw;
+  font-weight: 500;
+  /* letter-spacing: 0.4px; */
+  line-height: 1.5vw;
+}
+
+.data .by {
+  padding: 1vw 2vw;
+  margin: 0;
+  color: #283996;
+}
+
+.data span {
+  display: flex;
+  justify-content: center;
+  color: #283996;
+  margin-bottom: 2vw;
+}
+
+.data .coma1 {
+    width: 2.5vw;
+    /* padding: 0 1vw; */
+    top: 442vw;
+    position: absolute;
+}
+
+.data .coma2 {
+  width: 2.5vw;
+  left: 30vw;
+  position: absolute;
+  top: 451vw;
+}
+
+/* Mobile styles */
+@media (min-width: 350px) and (max-width: 767px) {
+  .patrons {
+    display: flex;
+    overflow-x: auto;
+    gap: 0;
+    /* Additional styles for slider layout */
+  }
+  
+  .data {
+    /* Styles for individual testimonial item */
+    width: 100%; /* Ensure each item takes up full width */
+    flex-shrink: 0; /* Prevent items from shrinking */
+    /* Other styles as needed */
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .patrons {
+    display: flex; /* Hide the slider on larger screens */
+  }
+}

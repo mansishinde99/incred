@@ -1,11 +1,11 @@
 .main {
   background-color: #e4e9ff;
   overflow: hidden;
-  height: 76vh;
+  height: 66vh;
 }
 
 .jumbotron {
-  margin-left: 155px;
+  margin-left: 75px;
   padding: 0 15px;
   display: flex;
   align-items: center;
@@ -24,16 +24,16 @@
 }
 
 .textSide .title {
-  font-size: 4vw;
+  font-size: 4.5vw;
   font-weight: 600;
-  margin-top: 4vw;
-  margin-bottom: 3rem;
+  margin-top: 7vw;
+  margin-bottom: 2vw;
   color: #283996;
-  line-height: 5.5vw;
+  line-height: 6vw;
 }
 
 .textSide .title span {
-  color: rgb(249, 68, 2);
+  color: #F15423;
 }
 
 .textSide .subsButton {
@@ -55,13 +55,18 @@
   width: -1vw;
 }
 
-.featureList .feature .image {
-  width: 3vw;
-  height: 3vw;
+.featureList .feature .featureImage {
   background-color: white;
   border-radius: 4vw;
   padding: 1.5vw;
   cursor: pointer;
+  width: 2vw;
+  height: 2vw;
+}
+
+.featureList .feature .featureImage img{
+  width: 2.2vw;
+  height: 2.2vw;  
 }
 
 .featureList .feature .textpart {
@@ -70,7 +75,7 @@
 
 .featureList .feature .featuretitle {
   font-size: 1.7vw;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0.5vw 0;
 }
 
@@ -87,23 +92,23 @@
   font-weight: 500;
 }
 
-.two-buttons{
-margin-top: 2vw;
-display: flex;
-gap: 2vw;
+.two-buttons {
+  margin-top: 2vw;
+  display: flex;
+  gap: 2vw;
 }
 
-.two-buttons .get-started{
+.two-buttons .get-started {
   padding: 1.5vw 3vw;
-    background-color: #283996;
-    border: none;
-    color: white;
-    font-weight: 600;
-    border-radius: 0.5vw;
-    align-self: center;
+  background-color: #283996;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5vw;
+  align-self: center;
 }
 
-.two-buttons .watch-video{
+.two-buttons .watch-video {
   cursor: pointer;
   background-color: #fff;
   padding: 1.5vw 2vw;
@@ -117,7 +122,6 @@ gap: 2vw;
   height: 1vw;
 }
 
-
 /* .textSide .note img {
   width: 45px;
   height: 45px;
@@ -130,23 +134,24 @@ gap: 2vw;
 } */
 
 .imgSide {
-  width: 19%;
-  padding: 0 15px;
+  /* width: 19%; */
+  /* padding: 0 15px; */
+  position: absolute;
+  right: 6vw;
+  bottom: 5vw;
 }
 
 .imgSide img {
-  width: 23vw;
-  height: 72vh;
-  position: relative;
-  top: 2vw;
-  left: -3vw;
+  max-width: 20vw;
+  /* height: 72vh;
+  left: -3vw; */
 }
 
-@media (max-width: 650px) {
+@media (min-width: 350px) and (max-width: 767px) {
   .main {
     display: block;
-    background-color: #fff;
-    height: 100%;
+    background-color: #eaeefd;
+    height: 77vh;
   }
 
   .jumbotron {
@@ -168,21 +173,105 @@ gap: 2vw;
     position: relative;
     margin: 0;
   }
+
   .textSide .title {
-    font-size: 2rem;
+    font-size: 6vw;
     font-weight: 600;
-    margin-top: 43px;
+    margin-top: 17vw;
     margin-bottom: 1.5rem;
+    line-height: 8vw;
   }
 
-  /* .imgSide{
+  .featureList {
+    display: block;
+  }
+
+  .featureList .feature {
+    display: flex;
+    margin: 4vw 0;
+}
+
+.featureList .feature .featureImage{
+  background-color: white;
+  border-radius: 11vw;
+  padding: 3.5vw;
+  cursor: pointer;
+}
+
+  .featureList .feature .featureImage img {
+    width: 11vw;
+    height: 6vh;
+  }
+
+  .featureList .feature .textpart {
+    margin: 0 6vw;
+    z-index: 999;
+  }
+
+  .featureList .feature .featuretitle {
+    font-size: 4.5vw;
+    font-weight: 600;
+    margin: 0.5vw 0;
+  }
+
+  .featureList .feature .text {
+    color: rgb(249, 68, 2);
+    margin: 0 0 1vw;
+    font-weight: 500;
+    font-size: 3.5vw;
+  }
+
+  .featureList .feature .subtext {
+    color: #6d6d6d;
+    margin: 0.5vw 0;
+    font-size: 3vw;
+    font-weight: 500;
+  }
+
+  .imgSide {
+    display: flex;
+    justify-content: end;
+    padding-right: 0;
+  }
+
+  /* .imgSide img {
+    width: 50vw;
+    height: 48vh;
     position: absolute;
   } */
 
-  .imgSide img {
-    width: 363px;
+  .two-buttons {
+    margin-top: 5vw;
+    z-index: 999;
     position: absolute;
-    top: 42vh;
-    left: 1vh;
+    display: inline;
+  }
+
+  .two-buttons .get-started {
+    padding: 4vw 10vw;
+    background-color: #283996;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 1vw;
+    margin-bottom: 4vw;
+  }
+
+  .two-buttons .watch-video {
+    cursor: pointer;
+    background-color: #fff;
+    padding: 5vw 8vw;
+    border: 1px solid black;
+    border-radius: 1vw;
+    font-size: 3.5vw;
+    font-weight: 600;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    height: 1vw;
+  }
+
+  .watch-video .css-i4bv87-MuiSvgIcon-root {
+    width: 4vw !important ;
   }
 }

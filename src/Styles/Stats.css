@@ -52,3 +52,52 @@
   line-height: 1.22rem;
   width: 150px;
 }
+
+@media (min-width: 350px) and (max-width: 767px) {
+  .stats {
+    padding: 48px 35px;
+    background-color: #FAF9F9;
+  }
+  
+  .statsTitle {
+    text-align: center;
+    padding: 0 !important;
+  }
+
+  .head {
+    font-size: 10vw !important;
+    font-weight: 600;
+    text-align: center;
+    line-height: 15vw;
+  }
+
+  .statsFold {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 15vw 8vw;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 27px;
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .entirestats{
+    width: 30vw;
+    text-align: center;
+  }
+
+  .entirestats img {
+    width: 15vw;
+    height: 10vh;
+    margin: 1vw;
+}
+
+.entirestats .textPart .text {
+  font-size: 4.2vw;
+  font-weight: 500;
+  margin: 0;
+  line-height: 5vw;
+}
+}

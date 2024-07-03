@@ -1,47 +1,117 @@
-.defaults{
-    display: flex;
-    gap: 5vw;
-    margin: 4vw 0 2vw 16vw;
+.defaults {
+  display: flex;
+  gap: 5vw;
+  margin: 3vw 0 2vw 16vw;
 }
 
-.defaults .date{
-    width: 25vw;
+.defaults .date {
+  width: 25vw;
 }
 
-.defaults .date .zero{
-    font-size: 14vw;
+.defaults .date .zero {
+  font-size: 14vw;
+  font-weight: bold;
+  margin: 0;
+  color: #283995;
+  text-align: center;
+}
+
+.defaults .date .dtd {
+  font-size: 2vw;
+  font-weight: 600;
+  margin: 0;
+}
+
+.defaults .payments {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.defaults .payments .logImage {
+  width: 24vw;
+  border: 1px solid;
+  border-image: linear-gradient(0deg,#dedddd,transparent) 1 100%;
+  text-align: center;
+  padding: 1.3vw;
+}
+
+.defaults .payments .logImage .image{
+    background-color: #DFE4FE;     
+    width: 3.7vw;
+    border-radius: 50%;
+    padding: .74vw;
+    margin: 0 8vw;
+}
+
+.defaults .payments .logImage .image img{
+  width: 3.5vw;
+  height: 7.3vh;
+}
+
+.defaults .payments .logImage .text {
+  font-size: 1.7vw;
+  font-weight: 600;
+  margin: 0.5vw;
+}
+
+.defaults .payments .logImage .subtext {
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 350px) and (max-width: 767px) {
+  .defaults {
+    margin: 2vw 0;
+    display: inline;
+  }
+
+  .defaults .date {
+    width: 100%;
+  }
+
+  .defaults .date .zero {
+    width: 100%;
+    height: 50vh;
+    font-size: 70vw;
     font-weight: bold;
     margin: 0;
     color: #283995;
     text-align: center;
-}
+  }
 
-.defaults .date .dtd{
-    font-size: 2vw;
-    font-weight: 600;
+  .defaults .date .dtd {
+    font-size: 8vw;
+    font-weight: 500;
     margin: 0;
-}
+    text-align: center;
+  }
 
-.defaults .payments{
+  .defaults .payments {
     display: flex;
     flex-wrap: wrap;
-}
+    justify-content: space-between;
+  }
 
-.defaults .payments .logImage{
-    width: 24vw;
-    border: 1px solid;
-    border-image: linear-gradient(180deg,#dedddd,transparent) 1 100%; 
+  .defaults .payments .logImage {
+    width: 32vw;
+    border: none;
+    /* border-right: 1px solid;
+    border-image: linear-gradient(0deg, #dedddd, transparent) 1 100%;
+    border-left: none;
+    border-top: none; */
     text-align: center;
-    padding: 1.3vw;
-}
+    padding: 7vw;
+  }
 
-.defaults .payments .logImage .text{
-    font-size: 1.7vw;
+  .defaults .payments .logImage .text {
+    font-size: 4.3vw;
     font-weight: 600;
-    margin: 0.5vw;
-}
+  }
 
-.defaults .payments .logImage .subtext{
+  .defaults .payments .logImage .subtext {
     margin: 0;
     font-weight: 500;
+    font-size: 3vw;
+    width: 40vw;
+  }
 }

@@ -1,29 +1,29 @@
-.faqs{
-margin: 5rem 150px 3rem ;
+.faqs {
+  margin: 5rem 150px 3rem;
 }
 
-.faqs h1{
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    margin: 0 217px 36px;
+.faqs h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 217px 36px;
 }
 
-.faq{
-    padding: 1.5rem 0;
-    border-bottom: 1px solid #e3e4e4;
-    cursor: pointer;
+.faq {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e3e4e4;
+  cursor: pointer;
 }
 
-.faq p{
-    font-size: 1.11rem;
-    font-weight: 700;
+.faq p {
+  font-size: 1.11rem;
+  font-weight: 700;
 }
 
-.faq .answer{
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 2;
+.faq .answer {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
 }
 
 /* .faq p KeyboardArrowRightIcon{
@@ -31,3 +31,16 @@ color: gray;
 float: right;
 font-size: 35px;
 } */
+
+@media (min-width: 350px) and (max-width: 767px) {
+  .faqs {
+    margin: 1vw 4vw;
+  }
+
+  .faqs h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+  }
+}
