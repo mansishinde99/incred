@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "../Styles/Login.css";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
