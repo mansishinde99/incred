@@ -10,21 +10,25 @@ import TextImg from "../Components/TextImg";
 import Awards from "../Components/Awards";
 import Faqs from "../Components/Faqs";
 import Footer from "../Components/Footer";
+import Featured from "../Components/Featured";
+// import Testimonials from "../Components/Testimonials";
 
 const MAIN = () => {
   return (
     <div>
       <Voucher />
       <Navbar />
-       <Mainpage />
+      <Mainpage />
       <Graph />
-      <Stats/>
-      <Investbond/>
-      <CurrentIssues/>
-      <TextImg/>
-      <Awards/>
-      <Faqs/>
-      <Footer/>
+      <Stats />
+      <Investbond />
+      <CurrentIssues />
+       <TextImg />
+      <Featured />
+      <Awards />
+      {/* <Testimonials /> */}
+      <Faqs />
+      <Footer />
     </div>
   );
 };

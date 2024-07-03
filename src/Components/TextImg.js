@@ -21,11 +21,11 @@ const texts = [
 ];
 
 const TextImg = () => {
-  const [open, setOpen] = useState(new Array(texts.length));
+  const [open, setOpen] = useState(new Array(texts.length).fill(false));
 
   const opened = (index) => {
-    const updatedOpen = [...open];
-    updatedOpen[index] = !updatedOpen[index];
+    const updatedOpen = new Array(texts.length).fill(false);
+    updatedOpen[index] = !open[index];
     setOpen(updatedOpen);
   };
 
@@ -35,7 +35,7 @@ const TextImg = () => {
         <p>Why Alternate Assets</p>
       </div>
       <div className="textImgBlock">
-        <img src="https://assets.incredmoney.com/images/webp/altGraph.webp" />
+        <img src="https://assets.incredmoney.com/images/webp/altGraph.webp" alt="Graph" />
         <div className="alltext">
           {texts.map((text, index) => (
             <div className="texts" key={index}>
@@ -51,7 +51,7 @@ const TextImg = () => {
                   }}
                 />
               </p>
-              {open[index] ? <p className="text2">{text.text2}</p> : null}
+              {open[index] && <p className="text2">{text.text2}</p>}
             </div>
           ))}
         </div>
