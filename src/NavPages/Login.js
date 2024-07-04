@@ -48,11 +48,11 @@ const Login = () => {
     <div className="loginPage">
       <div className="leftSide">
         <div className="sideBarContent">
-          <p className="text">Earn <span>10-12% p.a.</span><br/> fixed returns</p>
-          <p className="sub-text">Start with minimum ₹10,000</p>
+          <p className="text">Diversify With Confidence</p>
+          <p className="sub-text">Start with minimum <span>₹5,000</span></p>
           <ul>
-            <li>Senior Secured Bonds</li>
-            <li>Listed</li>
+            <li>Up to 9.10% p.a. on FDs</li>
+            <li>1-12% p.a. on Bonds</li>
             <li>Anytime Liquidity</li>
           </ul>
         </div>
@@ -74,6 +74,7 @@ const Login = () => {
       <div className="rightSide">
         <img className="logo" src="https://assets.incredmoney.com/images/webp/incred-money.webp"/>
         <p className="title">Welcome to <span>InCred Money</span></p>
+        
         {/* <div className="choose">
           <div
             className="via"
