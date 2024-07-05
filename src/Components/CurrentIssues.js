@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import "../Styles/CurrentIssues.css";
 import Slider from "react-slick";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import Switch from "@mui/material/Switch";
-import Stack from "@mui/material/Stack";
-import { styled } from "@mui/material/styles";
+import { Switch } from "antd";
 
 const CurrentIssues = () => {
   const [bonds, setBonds] = useState([]);
   const [fd, setFd] = useState([]);
   const [color, setColor] = useState("bonds");
-  const [switchOn, setSwitchOn] = useState(true);
+  const [switchOn, setSwitchOn] = useState([]);
 
   useEffect(() => {
     fetch("https://api.incredmoney.com/orobonds/bonds/")
@@ -21,8 +19,10 @@ const CurrentIssues = () => {
   useEffect(() => {
     fetch("https://api.incredmoney.com/fixedDeposits/fd")
       .then((resp) => resp.json())
-      .then((json) => setFd(json));
-    console.log("Ff", fd);
+      .then((json) => {
+        setFd(json);
+        setSwitchOn(Array(json.data.length).fill(true)); // Initialize switch states based on fd data length
+      });
   }, []);
 
   const settings = {
@@ -31,7 +31,6 @@ const CurrentIssues = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
     autoplaySpeed: 2000,
   };
 
@@ -39,52 +38,12 @@ const CurrentIssues = () => {
     setColor(color);
   };
 
-  const AntSwitch = styled(Switch)(({ theme }) => ({
-    width: 28,
-    height: 16,
-    padding: 0,
-    display: "flex",
-    "&:active": {
-      "& .MuiSwitch-thumb": {
-        width: 15,
-      },
-      "& .MuiSwitch-switchBase.Mui-checked": {
-        transform: "translateX(9px)",
-      },
-    },
-    "& .MuiSwitch-switchBase": {
-      padding: 2,
-      "&.Mui-checked": {
-        transform: "translateX(12px)",
-        color: "#fff",
-        "& + .MuiSwitch-track": {
-          opacity: 1,
-          backgroundColor:
-            theme.palette.mode === "dark" ? "#888889" : "#283995",
-        },
-      },
-    },
-    "& .MuiSwitch-thumb": {
-      boxShadow: "0 2px 4px 0 rgb(0 35 11 / 20%)",
-      width: 12,
-      height: 12,
-      borderRadius: 6,
-      transition: theme.transitions.create(["width"], {
-        duration: 200,
-      }),
-    },
-    "& .MuiSwitch-track": {
-      borderRadius: 16 / 2,
-      opacity: 1,
-      backgroundColor:
-        theme.palette.mode === "dark"
-          ? "rgba(255,255,255,.35)"
-          : "rgba(0,0,0,.25)",
-      boxSizing: "border-box",
-    },
-  }));
+  const toggleSwitch = (index) => {
+    setSwitchOn((prevStates) =>
+      prevStates.map((state, i) => (i === index ? !state : state))
+    );
+  };
 
-  
   return (
     <div className="currentIssues">
       <h1 className="head">Current Issues</h1>
@@ -93,8 +52,8 @@ const CurrentIssues = () => {
         <button
           onClick={() => changeColor("bonds")}
           style={{
-            backgroundColor: color == "bonds" ? "#283a97" : "#fff",
-            color: color == "bonds" ? "#fff" : "#283a97",
+            backgroundColor: color === "bonds" ? "#283a97" : "#fff",
+            color: color === "bonds" ? "#fff" : "#283a97",
           }}
         >
           Bonds
@@ -102,16 +61,15 @@ const CurrentIssues = () => {
         <button
           onClick={() => changeColor("deposit")}
           style={{
-            color: color == "deposit" ? "#fff" : "#283a97",
-            backgroundColor: color == "deposit" ? "#283a97" : "#fff",
+            color: color === "deposit" ? "#fff" : "#283a97",
+            backgroundColor: color === "deposit" ? "#283a97" : "#fff",
           }}
         >
           Fixed Deposits
         </button>
       </div>
 
-      {color == "bonds" ? (
-        // BONDS
+      {color === "bonds" ? (
         <div className="bonds">
           <Slider {...settings}>
             {bonds.data?.map((data, id) => {
@@ -122,14 +80,10 @@ const CurrentIssues = () => {
                   </div>
                   <p className="soldout">{data.soldOutTxt}% sold out</p>
                   <div className="logo-displayName">
-                    <img className="logo" src={data.logoUrl} />
+                    <img className="logo" src={data.logoUrl} alt="logo" />
                     <p className="displayName">{data.displayName}</p>
                   </div>
                   <li>Corporate Bond</li>
-                  {/* <div className="mid">
-                <p className="issuer">Issuer: {data.productName}</p>
-                <p className="desc">{data.description}</p>
-              </div> */}
                   <p className="maturity">Maturity Date: {data.maturityDate}</p>
                   <div className="wrapper">
                     <div className="content">
@@ -158,7 +112,6 @@ const CurrentIssues = () => {
           </Slider>
         </div>
       ) : (
-        // FIXED DEPOSITS
         <div className="deposits">
           <Slider {...settings}>
             {fd.data?.map((data, id) => {
@@ -167,31 +120,28 @@ const CurrentIssues = () => {
                   <div className="content">
                     <p className="return">{data.productTagLine}</p>
                     <p className="citizen">Sr. Citizen</p>
-                    <Stack direction="row" alignItems="center">
-                      <AntSwitch
-                        defaultChecked={true}
-                        inputProps={{ "aria-label": "ant design" }}
-                        onChange={(event) => setSwitchOn(event.target.checked)}
-                      />
-                    </Stack>
-                  </div>
 
+                    <Switch
+                      checked={switchOn[id] || false}
+                      onChange={() => toggleSwitch(id)}
+                    />
+                  </div>
                   <div className="content">
-                    <img src={data.logoUrl} />
+                    <img src={data.logoUrl} alt="logo" />
                     <p className="display-name">{data.displayName}</p>
                     <div>
                       <p className="interest">Interest up to</p>
                       <div className="annum">
-                        {switchOn ? 
-                        (<p className="return-amount">
-                          {data.maxReturns.returns +
-                            data.maxReturns.seniorCitizenBenefits +
-                            data.maxReturns.womenBenefits}
-                        </p>
+                        {switchOn[id] ? (
+                          <p className="return-amount">
+                            {data.maxReturns.returns +
+                              data.maxReturns.seniorCitizenBenefits +
+                              data.maxReturns.womenBenefits}
+                          </p>
                         ) : (
-                        <p className="return-amount">
-                          {data.maxReturns.returns}
-                        </p>
+                          <p className="return-amount">
+                            {data.maxReturns.returns}
+                          </p>
                         )}
                         <div className="perc">
                           <p className="percent">%</p>
@@ -205,12 +155,14 @@ const CurrentIssues = () => {
                     <img
                       className="sheild"
                       src="https://assets.incredmoney.com/images/webp/NeutralCard1.webp"
+                      alt="Easy Withdrawal"
                     />
                     <p className="withdrawal">Easy Withdrawal</p>
 
                     <img
                       className="star"
                       src="https://assets.incredmoney.com/images/webp/NeutralCard2.webp"
+                      alt="DICGC Insured"
                     />
                     <p className="insured">DICGC Insured</p>
                   </div>

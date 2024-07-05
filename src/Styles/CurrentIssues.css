@@ -150,7 +150,7 @@
   background-color: #fff;
   border: 1px solid #283995;
   border-radius: 0.5vw;
-  padding: .5vw;
+  padding: 0.5vw;
   font-size: 1.2vw;
   font-weight: 600;
   cursor: pointer;
@@ -168,7 +168,7 @@
 }
 
 .fixed-deposits-cards {
-  border: 0.1vw solid #CACBCC;
+  border: 0.1vw solid #cacbcc;
   border-radius: 1vw;
   width: 25vw !important;
   margin: 0 1vw;
@@ -179,9 +179,9 @@
 .fixed-deposits-cards .content {
   display: flex;
   justify-content: space-between;
-  background-color: #F5F5F6 ;
+  background-color: #f5f5f6;
   padding: 0 1vw 2vw;
-  border-radius: .4vw;
+  border-radius: 0.4vw;
 }
 
 .fixed-deposits-cards .content .return {
@@ -191,27 +191,27 @@
   margin-right: 2vw;
   height: 1.8vw;
   border-radius: 0 0 0.5vw 0.5vw;
-  font-size: .8vw;
+  font-size: 0.8vw;
   font-weight: 700;
   padding-top: 1vw !important;
-  padding: .5vw;
+  padding: 0.5vw;
 }
 
-.fixed-deposits-cards .content .citizen{
+.fixed-deposits-cards .content .citizen {
   margin: 0;
   padding-top: 1vw !important;
-  padding: .5vw;
+  padding: 0.5vw;
   font-size: 1vw;
   font-weight: 500;
   color: #646466;
 }
 
-.fixed-deposits-cards .content img{
+.fixed-deposits-cards .content img {
   width: 4vw;
   height: 8vh;
 }
 
-.fixed-deposits-cards .content .display-name{
+.fixed-deposits-cards .content .display-name {
   margin: 0.5vw 0vw;
   font-size: 1vw;
   font-weight: 600;
@@ -219,8 +219,8 @@
   line-height: 1.4vw;
 }
 
-.fixed-deposits-cards .content .interest{
-  margin: 0.3vw .5vw;
+.fixed-deposits-cards .content .interest {
+  margin: 0.3vw 0.5vw;
   color: #283995;
   font-size: 1.5vw;
   font-weight: 500;
@@ -232,47 +232,79 @@
   color: #283995;
 }
 
-.percent, .per-annum{
+.percent,
+.per-annum {
   margin: 0;
   color: #283995;
   font-weight: 600;
 }
 
-.return-amount{
+.return-amount {
   margin: 0;
-    font-size: 3vw;
-    font-weight: 700;
+  font-size: 3vw;
+  font-weight: 700;
 }
 
-.content2  {
+.content2 {
   display: flex;
   /* justify-content: space-between; */
-  background-color: #ffffff ;
+  background-color: #ffffff;
   padding: 1vw;
   border-radius: 1.1vw;
   color: #646466;
   font-size: 1vw;
 }
 
-.content2 .withdrawal{
-  margin: .5vw 0;
+.content2 .withdrawal {
+  margin: 0.5vw 0;
 }
 
-.content2 .sheild{
-  margin: 0 .4vw 0 0;
+.content2 .sheild {
+  margin: 0 0.4vw 0 0;
 }
 
-.content2 .star{
-  margin: 0 .4vw 0 3vw;
+.content2 .star {
+  margin: 0 0.4vw 0 3vw;
 }
 
-.content2 .insured{
-  margin: .5vw 0;
+.content2 .insured {
+  margin: 0.5vw 0;
+}
+
+.ant-switch.ant-switch-checked {
+  background: #0c428d;
 }
 
 
+.ant-switch {
+  margin: 15px 1px;
+  min-width: 30px;
+  height: 16px;
+}
 
+.ant-switch.ant-switch-checked .ant-switch-handle {
+  inset-inline-start: calc(106% - 18px);
+}
 
+.ant-switch .ant-switch-handle {
+  position: absolute;
+  top: 1px;
+  inset-inline-start: 2px;
+  width: 14px;
+  height: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.ant-switch-inner {
+  display: block;
+  overflow: hidden;
+  border-radius: 100px;
+  height: 100%;
+  /* padding-inline-start: 24px;
+    padding-inline-end: 9px; */
+  transition: padding-inline-start 0.2s ease-in-out,
+    padding-inline-end 0.2s ease-in-out;
+}
 
 @media (min-width: 350px) and (max-width: 767px) {
   .bonds {
