@@ -11,9 +11,10 @@ import Awards from "../Components/Awards";
 import Faqs from "../Components/Faqs";
 import Footer from "../Components/Footer";
 import Featured from "../Components/Featured";
+
 // import Testimonials from "../Components/Testimonials";
 
-const MAIN = () => {
+const Main = () => {
   return (
     <div>
       <Voucher />
@@ -23,7 +24,7 @@ const MAIN = () => {
       <Stats />
       <Investbond />
       <CurrentIssues />
-       <TextImg />
+      <TextImg />
       <Featured />
       <Awards />
       {/* <Testimonials /> */}
@@ -33,4 +34,4 @@ const MAIN = () => {
   );
 };
 
-export default MAIN;
+export default Main;

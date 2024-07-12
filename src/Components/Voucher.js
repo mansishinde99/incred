@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import '../Styles/Voucher.css'
+import React, { useEffect, useState } from "react";
+
+import "../Styles/Voucher.css";
 
 //url: "https://api.incredmoney.com/funds/getBannerData";
 
-
 const Voucher = () => {
-  const[alldata,setAlldata] = useState([])
+  const [alldata, setAlldata] = useState([]);
 
   useEffect(() => {
     fetch("https://api.incredmoney.com/funds/getBannerData")
@@ -15,14 +15,14 @@ const Voucher = () => {
   }, []);
 
   return (
-    <div className='voucherStrip'>
-          {alldata.data?.map((data,i) => (
-            <div className='voucherAlert' key={i}>
-            <p className='text'>{data.bannerText}</p>
+    <div className="voucherStrip">
+      {alldata.data?.map((data, i) => (
+        <div className="voucherAlert" key={i}>
+          <p className="text">{data.bannerText}</p>
         </div>
-          ))}
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Voucher
+export default Voucher;

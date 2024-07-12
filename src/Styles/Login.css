@@ -184,3 +184,29 @@ input {
   font-weight: 600;
   cursor: pointer;
 }
+
+.verification input{
+  background-color: #c8cced;
+  margin: .4vw;
+    border-radius: .3vw;
+    width: 2vw !important;
+    height: 4vh;
+}
+
+.verification {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.verification .title {
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-top: 0;
+  color: #283a97;
+}
+
+.verification .title span{
+  color: #EF5D28;
+}
